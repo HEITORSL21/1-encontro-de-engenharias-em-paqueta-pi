@@ -1,8 +1,772 @@
-<title>Convite Encontro das Engenharias</title>
-<div style="position: relative; width: 100%; height: 0; padding-top: 140.9677%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAG2JuIIEA0/lhIyA9QEoRZ6Hf4MbqH97Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Convite — 1° Encontro de Engenharias em Paquetá-PI</title>
+  <meta name="description" content="Participe do 1° Encontro de Engenharias em Paquetá-PI. Confirme sua presença e obtenha informações sobre localização e programação do evento." />
+  <meta property="og:title" content="Convite — 1° Encontro de Engenharias em Paquetá-PI" />
+  <meta property="og:description" content="Participe do 1° Encontro de Engenharias em Paquetá-PI. Confirme sua presença e obtenha informações sobre localização e programação do evento." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://SEU_USUARIO.github.io/1-encontro-de-engenharias-em-paqueta-pi/" />
+  <meta property="og:image" content="background.jpg" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Nova paleta de cores profissional para engenharia */
+      --primary-blue: #1a3c5c;
+      --secondary-blue: #2c5a82;
+      --accent-teal: #0b8f8f;
+      --light-gray: #f0f2f5;
+      --medium-gray: #8c96a0;
+      --dark-gray: #2d3748;
+      --white: #ffffff;
+      --shadow: 0 8px 30px rgba(0,0,0,0.12);
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(135deg, var(--light-gray) 0%, #e6e9ef 100%);
+      color: var(--dark-gray);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2rem 1.5rem;
+      min-height: 100vh;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* Animações de entrada */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .animated {
+      animation-duration: 0.8s;
+      animation-fill-mode: both;
+    }
+    
+    .fadeInUp {
+      animation-name: fadeInUp;
+    }
+    
+    .fadeIn {
+      animation-name: fadeIn;
+    }
+    
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin: 0.5em 0 0.3em;
+      color: var(--primary-blue);
+      text-align: center;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--accent-teal);
+      border-radius: 2px;
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--secondary-blue);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    
+    p.desc {
+      text-align: center;
+      max-width: 700px;
+      font-size: 1rem;
+      margin: 0 auto 1.5em;
+      line-height: 1.6;
+      color: var(--medium-gray);
+    }
+    
+    /* Container do convite aprimorado */
+    .frame-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 0;
+      padding-top: 56.25%; /* Proporção 16:9 para melhor visualização */
+      box-shadow: var(--shadow);
+      margin: 1.5em auto;
+      overflow: hidden;
+      border-radius: 12px;
+      will-change: transform;
+      background: var(--white);
+      transition: var(--transition);
+    }
+    
+    .frame-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    /* Ações aprimoradas */
+    .actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2em 0 1.5em;
+      width: 100%;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      min-width: 200px;
+    }
+    
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.7s;
+    }
+    
+    .btn:hover::before {
+      left: 100%;
+    }
+    
+    .btn-primary {
+      background: var(--accent-teal);
+      color: var(--white);
+      box-shadow: 0 6px 18px rgba(11, 143, 143, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background: #0a7a7a;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(11, 143, 143, 0.4);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: var(--secondary-blue);
+      border: 2px solid var(--secondary-blue);
+    }
+    
+    .btn-outline:hover {
+      background: var(--secondary-blue);
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(44, 90, 130, 0.2);
+    }
+    
+    .btn-icon {
+      margin-right: 8px;
+      font-size: 1.2em;
+    }
+    
+    /* QR Code aprimorado */
+    .qr-container {
+      margin-top: 2em;
+      text-align: center;
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      max-width: 300px;
+      width: 100%;
+      transition: var(--transition);
+    }
+    
+    .qr-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    
+    .qr-title {
+      font-size: 1.1rem;
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    .qr-code {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: white;
+      padding: 10px;
+    }
+    
+    .qr-code svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    
+    .note {
+      font-size: 0.85rem;
+      color: var(--medium-gray);
+      margin-top: 1rem;
+      line-height: 1.5;
+    }
+    
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--medium-gray);
+      font-size: 0.9rem;
+      padding: 1rem 0;
+      width: 100%;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .frame-container {
+        padding-top: 141%; /* Proporção original para mobile */
+      }
+      
+      .actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .qr-code {
+        width: 180px;
+        height: 180px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+      
+      p.desc {
+        font-size: 0.9rem;
+      }
+      
+      .qr-code {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="animated fadeInUp">
+      <p class="subtitle animated fadeIn delay-1">Convite Oficial</p>
+      <h1 class="animated fadeInUp delay-1">1° Encontro de Engenharias em Paquetá-PI</h1>
+      <p class="desc animated fadeIn delay-2">
+        Visualize abaixo o convite oficial do evento. Utilize os botões para confirmar sua presença ou acessar a localização.
+      </p>
+    </header>
+
+    <!-- Pré-visualização do convite (Canva Embed) -->
+    <div class="frame-container animated fadeIn delay-2">
+      <iframe loading="lazy"
+        src="https://www.canva.com/design/DAG2JuIIEA0/lhIyA9QEoRZ6Hf4MbqH97Q/view?embed"
+        allowfullscreen="allowfullscreen"
+        allow="fullscreen">
+      </iframe>
+    </div>
+
+    <!-- Ações -->
+    <div class="actions animated fadeIn delay-3">
+      <a id="confirm-btn" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+        <span class="btn-icon">✓</span> Confirmar presença
+      </a>
+      <a id="map-btn" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+        <span class="btn-icon">📍</span> Ver localização
+      </a>
+    </div>
+
+    <!-- QR Code -->
+    <div class="qr-container animated fadeIn delay-4">
+      <div class="qr-title">Confirmação Rápida</div>
+      <div class="qr-code">
+        <!-- QR Code SVG personalizado -->
+        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1023 1023">
+          <rect width="1023" height="1023" fill="#ffffff" x="0" y="0"  />
+          <g  fill="#1a3c5c">
+            <g transform="translate(310,62) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,62) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,62) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,62) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,62) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,62) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,62) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,93) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,93) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,93) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,93) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,93) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,93) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,93) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,124) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,124) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,124) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,124) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,124) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,124) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,124) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,124) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,155) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,155) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,155) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,155) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,155) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,186) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,186) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,186) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,186) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,186) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,186) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,186) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,186) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,217) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,217) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,217) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,248) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,248) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,248) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,248) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,248) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,248) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,248) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,279) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,279) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,279) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,279) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,279) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,279) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,279) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(124,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(155,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(248,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(868,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,310) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(62,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(93,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(124,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,341) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(62,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(93,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(124,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(155,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(248,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,372) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(279,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,403) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(93,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(155,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(248,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(279,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(868,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,434) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(93,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(124,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(155,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(279,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,465) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(62,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(93,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(248,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(279,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,496) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(124,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,527) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(62,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(248,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(868,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,558) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(62,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(93,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(124,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,589) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(62,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(155,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(248,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,620) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(62,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(124,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(155,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(279,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,651) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(62,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(155,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(186,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(217,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(248,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(279,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(868,682) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,713) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,744) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(930,775) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(868,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,806) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,837) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,837) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,837) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,837) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,837) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,837) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,837) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,837) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(310,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(434,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(527,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(682,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(775,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(837,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(868,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,868) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(403,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(558,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(589,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(713,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(899,899) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(341,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(372,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(465,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(496,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(620,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(651,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(744,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(806,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+            <g transform="translate(868,930) scale(5.3216666666667)"><rect width="6" height="6"/></g>
+          </g>
+          <g>
+            <g transform="translate(62,62)" fill="#1a3c5c"><g transform="scale(15.5)"><path d="M0,0v14h14V0H0z M12,12H2V2h10V12z"/></g></g>
+            <g transform="translate(744,62)" fill="#1a3c5c"><g transform="scale(15.5)"><path d="M0,0v14h14V0H0z M12,12H2V2h10V12z"/></g></g>
+            <g transform="translate(62,744)" fill="#1a3c5c"><g transform="scale(15.5)"><path d="M0,0v14h14V0H0z M12,12H2V2h10V12z"/></g></g>
+            <g transform="translate(124,124)" fill="#1a3c5c"><g transform="scale(15.5)"><path d="M6,1.7v2.7C6,5.2,5.2,6,4.3,6H1.7C0.7,6,0,5.3,0,4.3V1.7C0,0.8,0.8,0,1.7,0h2.7C5.3,0,6,0.7,6,1.7z"/></g></g>
+            <g transform="translate(806,124)" fill="#1a3c5c"><g transform="scale(15.5)"><path d="M6,1.7v2.7C6,5.2,5.2,6,4.3,6H1.7C0.7,6,0,5.3,0,4.3V1.7C0,0.8,0.8,0,1.7,0h2.7C5.3,0,6,0.7,6,1.7z"/></g></g>
+            <g transform="translate(124,806)" fill="#1a3c5c"><g transform="scale(15.5)"><path d="M6,1.7v2.7C6,5.2,5.2,6,4.3,6H1.7C0.7,6,0,5.3,0,4.3V1.7C0,0.8,0.8,0,1.7,0h2.7C5.3,0,6,0.7,6,1.7z"/></g></g>
+          </g>
+        </svg>
+      </div>
+      <div class="note">Escaneie o QR Code para confirmar sua presença pelo WhatsApp.</div>
+    </div>
+    
+    <footer class="animated fadeIn delay-4">
+      <p>1° Encontro de Engenharias em Paquetá-PI</p>
+    </footer>
+  </div>
+
+  <script>
+    // Atualização dos links conforme solicitado
+    document.getElementById('confirm-btn').href = 'https://wa.me/5589988128160?text=Confirmo%20minha%20presen%C3%A7a%20no%20evento.%0A%0AAtenciosamente%2C';
+    document.getElementById('map-btn').href = 'https://maps.app.goo.gl/Y8F4e2vFiBgmsBHYA';
+
+    // Adicionar classe de animação aos elementos quando a página carrega
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedElements = document.querySelectorAll('.animated');
+      animatedElements.forEach(el => {
+        el.style.opacity = '0';
+      });
+      
+      // Pequeno atraso para garantir que as animações funcionem
+      setTimeout(() => {
+        animatedElements.forEach(el => {
+          el.style.opacity = '1';
+        });
+      }, 100);
+    });
+  </script>
+</body>
+</html>
